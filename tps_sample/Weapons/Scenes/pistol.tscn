@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c12rcli4h3yvb"]
+
+[ext_resource type="Script" uid="uid://dvwocg0fjgywm" path="res://Weapons/Scripts/pistol.gd" id="1_2yngb"]
+[ext_resource type="PackedScene" uid="uid://bqxvn8k2m3n4p" path="res://Weapons/Scenes/bullet.tscn" id="2_3jqmy"]
+
+[node name="Pistol" type="Node3D" node_paths=PackedStringArray("muzzle_flash")]
+script = ExtResource("1_2yngb")
+muzzle_flash = NodePath("MuzzleFlash")
+projectile_scene = ExtResource("2_3jqmy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="MuzzleFlash" type="Node3D" parent="."]
+
+[node name="AimPoint" type="Node3D" parent="."]

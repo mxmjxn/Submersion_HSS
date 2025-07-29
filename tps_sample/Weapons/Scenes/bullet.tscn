@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqxvn8k2m3n4p"]
+
+[ext_resource type="Script" path="res://Weapons/Scripts/projectile.gd" id="1_0a1b2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1"]
+radius = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_1"]
+radius = 0.1
+height = 0.2
+
+[node name="Bullet" type="Area3D"]
+script = ExtResource("1_0a1b2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_1")
